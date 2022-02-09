@@ -1,31 +1,22 @@
 <?php 
-
 $accessToken = "ACCESS_TOKEN";
    $arrayHeader = array();
    $arrayHeader[] = "Content-Type: application/json";
    $arrayHeader[] = "Authorization: Bearer {$accessToken}";
-   
-  
    $user_id = 'xxxxxxxxxxxx';
-   
-   
       $arrayPostData['to'] = $user_id;
-      
       //Text
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "สวัสดีครับ";
-      
       //Sticker
       $arrayPostData['messages'][1]['type'] = "sticker";
       $arrayPostData['messages'][1]['packageId'] = "2";
       $arrayPostData['messages'][1]['stickerId'] = "34";
-      
       //Images
       $arrayPostData['messages'][2]['type'] = "image";
       $arrayPostData['messages'][2]['originalContentUrl'] = "https://yourweb.com/image.png";
       $arrayPostData['messages'][2]['previewImageUrl'] = "https://yourweb.com/image.png";
-      
-      
+        
     pushMsg($arrayHeader,$arrayPostData);
  
    function pushMsg($arrayHeader,$arrayPostData){
