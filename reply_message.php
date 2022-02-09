@@ -14,7 +14,7 @@ if($arrJson['events'][0]['message']['text'] == "Hello"){
   $arrayPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrayPostData['messages'][0]['type'] = "text";
   $arrayPostData['messages'][0]['text'] = "Hello ,your ID is ".$arrJson['events'][0]['source']['userId'];
-} } else {
+} else {
   $arrayPostData = array();
   $arrayPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrayPostData['messages'][0]['type'] = "text";
